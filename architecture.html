@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	
+	<head>
+		<title>Windows 95</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8">
+		<meta name="keyword" content="Learning, HTML, CSS, JavaScript">
+		<meta name="description" content="Just testing my HTML, CSS and JavaScript skills, but now with an older style.">
+		<meta name="author" content="Wellington Ribeiro">
+		<link rel="icon" href="img\favicon.ico">
+		<link rel="stylesheet" href="styles.css">
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+		
+		<header id="start">
+			<nav>
+				<h2>Architecture</h2>
+				<ul>
+					<li><a href="index.html"><u>H</u>OME</a></li>
+					<li><a href="architecture.html"><u>A</u>RCHITECTURE</a></li>
+					<li><a href="upgradability.html"><u>U</u>PGRADABILITY</a></li>
+				</ul>
+			</nav>
+			<div id="banner">
+				<img src="img\windows_logo.png" width="180px">
+				<h1>Windows <span>95</span></h1>
+			</div>
+		</header>
+
+		<main>
+			<h2>Main</h2>
+			<aside>
+					<ul>
+						<h3>Sumary</h3>
+						<li><a href="#architecture">Architecture</a></li>
+						<li><a href="#improvements">Improvements</a></li>
+						<li><a href="#requirements">Requirements</a></li>
+					</ul>
+			</aside>
+			<section>	
+				<h3 id="architecture">Architecture</h3>
+				<p>Windows 95 was designed to be maximally compatible with existing MS-DOS and 16-bit Windows programs and device drivers while offering a more stable and better performing system. The Windows 95 architecture is an evolution of Windows for Workgroups' 386 enhanced mode.
+<br /><br />
+<b>Configuration Manager (CONFIGMG)</b><br />
+Responsible for implementing Plug and Play functionality; monitoring hardware configuration changes; detecting devices using bus enumerators; and allocating I/O ports, IRQs, DMA channels and memory in a conflict-free fashion.
+<br /><br />
+<b>Installable File System Manager (Input/Output Subsystem)</b><br />
+Coordinates access to supported file systems. Windows 95 initially shipped with support for FAT12, FAT16, the VFAT extension, ISO 9660 (CDFS), Joliet and network redirectors, with later releases supporting FAT32.
+Access requests to physical media are sent to Input/Output Supervisor, a component responsible for scheduling the requests. Each physical media has its device driver: access to the disk is performed by a port driver, while access to a SCSI device is handled by a miniport driver working atop the SCSI layer. Port and Miniport drivers perform I/O operations in 32-bit protected mode, bypassing MS-DOS and BIOS, significantly improving performance. In case there is no native Windows driver for a certain storage device, or if a device is forced to run in compatibility mode, the Real Mode Mapper can access it through MS-DOS.
+<br />
+32-bit Windows programs are assigned their memory segments, which can be adjusted to any desired size. Memory areas outside the segment cannot be accessed by a program. If a program crashes, nothing else is harmed. Before this, programs used fixed non-exclusive 64 KB segments. While the 64 KB size was a serious handicap in DOS and Windows 3.x, lack of guarantee of exclusiveness was the cause of stability issues because programs sometimes overwrote each other's segments. A crashing Windows 3.x program could knock out surrounding processes.
+<br /><br />
+The Win32 API is implemented by three modules, each consisting of a 16-bit and a 32-bit component:
+<br /><br />
+<b>Kernel</b><br />
+Provides high-level access to memory and process management, and access to the file system. Consists of KRNL386.EXE, KERNEL32.DLL, and VWIN32.VXD.
+<br /><br />
+<b>User</b><br />
+Responsible for managing and drawing the various user interface components, such as windows, menus and buttons. Consists of USER.EXE and USER32.DLL.
+<br /><br />
+<b>Graphics Device Interface (GDI)</b><br />
+Responsible for drawing graphics in a device-independent way. Consists of GDI.EXE and GDI32.DLL.
+<br /><br />
+Accompanied by an extensive marketing campaign, Windows 95 introduced numerous functions and features that were featured in later Windows versions, and continue in modern variations to this day, such as the taskbar, notification area, and the "Start" button. It is considered to be one of the biggest and most important products in the personal computing industry.<br />
+Three years after its introduction, Windows 95 was followed by Windows 98. Nevertheless, Windows 95 remained the most popular operating system in 1998, despite the release of Windows 98. Microsoft ended mainstream support for Windows 95 on December 31, 2000. Like Windows NT 3.51, Windows 95 received only one year of extended support, ending on December 31, 2001.</p>
+				<hr />
+				<h3 id="improvements">Improvements</h3>
+				<p>Windows 95 included support for 255-character mixed-case long filenames and preemptively multitasked protected-mode 32-bit applications. 16-bit processes were still co-operatively multitasked.
+<br /><br />
+<b>Plug and Play</b><br />
+Windows 95 tried to automate device detection and configuration as much as possible, but could still fall back to manual settings if necessary. During the initial install process of Windows 95, it would attempt to automatically detect all devices installed in the system.
+<br />
+Windows 95 also introduced the Device Manager to indicate which devices were working optimally with correct drivers and configuration and to allow the user to override automatic Plug and Play-based driver installation with manual options or give a choice of several semi-automatic configurations to try to free up resources for devices that still needed manual configuration.
+<br />
+Windows 95 also has built-in support for Advanced Power Management.
+<br /><br />
+<b>Long file names</b><br />
+32-bit File Access is necessary for the long file names feature introduced with Windows 95 through the use of the VFAT file system extension. It is available to both Windows programs and MS-DOS programs started from Windows (they have to be adapted slightly, since accessing long file names requires using larger pathname buffers and hence different system calls). Competing DOS-compatible operating systems released before Windows 95 cannot see these names. Using older versions of DOS utilities to manipulate files means that the long names are not visible and are lost if files are moved or renamed and by the copy (but not the original) if the file is copied. During a Windows 95 automatic upgrade of an older Windows 3.1 system, DOS and third-party disk utilities which can destroy long file names are identified and made unavailable. When Windows 95 is started in DOS mode, e.g. for running DOS programs, low-level access to disks is locked out. In case the need arises to depend on disk utilities that do not recognize long file names, such as the MS-DOS 6.x's defrag utility, a program called LFNBACK for backup and restoration of long file names is provided on the CD-ROM, specifically in its \ADMIN\APPTOOLS\LFNBACK directory.
+<br /><br />
+<b>32-bit</b><br />
+Windows 95 followed Windows for Workgroups 3.11 with its lack of support for older, 16-bit x86 processors, thus requiring an Intel 80386 (or compatible). While the OS kernel is 32-bit, much code (especially for the user interface) remained 16-bit for performance reasons as well as development time constraints. This had a rather detrimental effect on system stability and led to frequent application crashes.
+<br />
+The introduction of 32-bit file access in Windows for Workgroups 3.11 meant that 16-bit real mode MS-DOS is not used for managing the files while Windows is running, and the earlier introduction of the 32-bit disk access means that the PC BIOS is often no longer used for managing hard disks. DOS can be used for running old-style drivers for compatibility, but Microsoft discourages using them, as this prevents proper multitasking and impairs system stability. Control Panel allows a user to see which MS-DOS components are used by the system; optimal performance is achieved when they are bypassed. The Windows kernel uses MS-DOS style real-mode drivers in Safe Mode, which exists to allow a user to fix problems relating to loading native, protected-mode drivers.
+<br /><br />
+<b>Core improvements in OEM Service Releases</b><br />
+OEM Service Releases of Windows 95 introduced support in Windows for several core new technologies that were not included in the original release of Windows 95. These include the Internet Explorer web browser, DriveSpace compression, OpenGL, DirectX, FAT32 file system support, UltraDMA mode for disk drives, Universal Serial Bus, IEEE 1394 (FireWire), and Accelerated Graphics Port.
+<br /><br />
+<b>Accessibility features</b><br />
+Windows 95 introduced computer accessibility features like Sticky keys, FilterKeys, ToggleKeys, Mouse keys. Microsoft Active Accessibility API was introduced as an add-on for Windows 95.</p>
+				<hr />
+				<h3 id="requirements">Requirements</h3>
+				<p>Official system requirements were an Intel 386DX CPU of any speed, 4 MB of system RAM and 50–55 MB of hard disk space depending on features selected. These minimal claims were made in order to maximize the available market of Windows 3.1 migrations. This configuration would rely heavily on virtual memory and was only optimal for productive use on single-tasking dedicated workstations. It was possible to run Windows 95 on a 386 SX, but this led to even less acceptable performance due to its 16-bit external data bus. To achieve optimal performance, Microsoft recommended an i486 or compatible CPU with at least 8 MB of RAM.
+<br /><br />
+Windows 95 may fail to boot on computers with a processor faster than 2.1 GHz and more than approximately 480 MB of memory. In such a case, reducing the file cache size or the size of video memory can help. The theoretical maximum according to Microsoft is 2 GB.
+<br /><br />
+Most copies of Windows 95 were on CD-ROM, but a 3+1⁄2-inch floppy version was also available for older machines. The retail floppy disk version of Windows 95 came on 13 DMF formatted floppy disks, while OSR2.1 doubled the floppy count to 26. Both versions exclude additional software that the CD-ROM version might have featured. Microsoft Plus! for Windows 95 was also available on floppy disks.</p>
+			</section>
+		</main>
+
+		<footer>
+			<h2>Footer</h2>
+			<p><strong>Copyright Free</strong></p>
+			<p>email: <a href="mailto:wellingtonmourar@gmail.com">wellingtonmourar@gmail.com</a></p>
+			<p><em>Wellington Ribeiro, 2024</em></p>
+		</footer>
+
+		<button id="totop" onclick="toTop()"> ^ </button>
+
+	</body>
+
+</html>

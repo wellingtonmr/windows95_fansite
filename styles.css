@@ -1,0 +1,165 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: lightseagreen;
+}
+
+header, main, footer {
+	background-color: lightgray;
+	font-family: MS Sans Serif;
+	width: 90%;
+	margin: 8px auto;
+	padding: 2px;
+	border: 2px outset lightgray;
+	box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+	overflow: hidden;
+}
+
+h2 {
+	background-color: darkblue;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 4px;
+	margin: 0 0 4px 0;
+}
+
+header nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+header nav li {
+	float: left;
+	background-color: lightgray;
+	font-size: 11px;
+}
+
+header nav a {
+	display: block;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+	padding: 2px 10px;
+}
+
+header li a:hover {
+	background-color: darkblue;
+	color: white;
+}
+
+#banner {
+	background-color: skyblue;
+	margin: 2px auto 0 auto;
+	padding: 10px 0;
+	border: 2px inset lightgray;
+}
+
+#banner img {
+	margin-left: 40px;
+	margin-top: 20px;
+}
+
+#banner h1 {
+	display: inline-block;
+	margin: 2px;
+	font-family: Franklin Gothic;
+	font-size: 120px;
+	font-weight: 900;
+}
+
+#banner h1 span {
+	font-weight: 100;
+	color: white;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1.5fr 2fr 2fr 2fr;
+	grid-template-areas: 
+	"hd hd hd hd"
+	"as sc sc sc"
+	"as sc sc sc"
+	"as sc sc sc";
+}
+
+main h2 {
+	grid-area: hd;
+}
+
+main section {
+	grid-area: sc;
+	margin: 0 2%;
+}
+
+main section p:last-child {
+	margin-bottom: 5%;
+}
+
+main aside{
+	grid-area: as;
+	padding-right: 5%;
+	border-right: 1px inset gray;
+}
+
+main aside h3 {
+	margin-left: -10px;
+	font-size: 16px;
+}
+
+main aside ul {
+	font-size: 14px;
+	position: sticky;
+	top: 3%;
+}
+
+main aside li {
+	margin-bottom: 5px;
+}
+
+main aside a {
+	color: black;
+	text-decoration: none;
+}
+
+main aside a:hover {
+	text-decoration: underline;
+}
+
+main aside a:active {
+	color: white;
+}
+
+footer p {
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 14px;
+}
+
+#totop {
+	position: fixed;
+	bottom: 1%;
+	right: 0.5%;
+	width: 4%;
+	height: 4%;
+	background-color: lightgray;
+	border: 2px outset lightgray;
+	box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+	color: black;
+	font-size: 1.5rem;
+}
+
+#totop:hover {
+	background-color: darkblue;
+	color: white;
+}
+
+#totop:active {
+	color: gray;
+}
